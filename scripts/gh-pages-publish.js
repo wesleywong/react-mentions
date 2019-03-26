@@ -5,7 +5,7 @@ const { execSync } = require('child_process')
 
 const branchName = process.argv[2]
 const dir = path.resolve(__dirname, '..', 'demo', 'dist')
-const demoUrl = `https://signavio.github.io/react-mentions/${branchName}`
+const demoUrl = `https://github.com/wesleywong/react-mentions/${branchName}`
 
 if (!fs.existsSync(dir)) {
   throw new Error(`${dir} does not exist. Run \`yarn build\` first.`)
@@ -46,7 +46,7 @@ ghpages.publish(
     const commitMessage = exec(
       'git --no-pager log --pretty=format:"%s" -1'
     ).replace(/\\"/g, '\\\\"')
-    const body = `Demo page for commit <code>${commitMessage}</code> has been published at:<br /><strong>https://signavio.github.io/react-mentions/${branchName}</strong>`
+    const body = `Demo page for commit <code>${commitMessage}</code> has been published at:<br /><strong>https://github.com/wesleywong/react-mentions/${branchName}</strong>`
     curl(
       `https://${GH_AUTH_TOKEN}:x-oauth-basic@api.github.com/repos/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}/issues/${prNumber}/comments`,
       JSON.stringify({ body })
