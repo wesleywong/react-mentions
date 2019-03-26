@@ -1,6 +1,6 @@
 {
-  "name": "react-mentions",
-  "version": "0.0.0-development",
+  "name": "react-sg-mentions",
+  "version": "0.1.0",
   "description": "React mentions input",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -33,9 +33,9 @@
   "author": "Jan-Felix Schwarz",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/signavio/react-mentions/issues"
+    "url": "https://github.com/wesleywong/react-mentions/issues"
   },
-  "homepage": "https://github.com/signavio/react-mentions",
+  "homepage": "https://github.com/wesleywong/react-mentions",
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "condition-circle": "^2.0.1",
